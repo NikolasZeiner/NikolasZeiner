@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikolas Zeiner — Data Analyst Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1C1C1E;
+    --pitch: #141414;
+    --grass: #5BC8F5;
+    --grass-dim: #4AB8E8;
+    --accent: #5BC8F5;
+    --red: #FF3B30;
+    --white: #f5f5f0;
+    --muted: #8a8f9e;
+    --card-bg: #242424;
+    --border: rgba(255,255,255,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: pointer;
+  }
+
+  /* Field pattern background */
+  .field-bg {
+    position: fixed;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 59px,
+        rgba(91,200,245,0.025) 59px,
+        rgba(91,200,245,0.025) 60px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 59px,
+        rgba(91,200,245,0.015) 59px,
+        rgba(91,200,245,0.015) 60px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: rgba(28,28,30,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--white);
+  }
+  .nav-logo span { color: #5BC8F5; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    pointer-events: all;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  .nav-links a:hover { color: #5BC8F5; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 48px 80px;
+    overflow: hidden;
+  }
+  .hero-content { max-width: 700px; }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #5BC8F5;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.2s ease forwards;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: #5BC8F5;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 10vw, 130px);
+    line-height: 0.92;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.4s ease forwards;
+  }
+  h1 .accent { color: #5BC8F5; }
+  h1 .outline {
+    -webkit-text-stroke: 1px rgba(245,245,240,0.3);
+    color: transparent;
+  }
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 480px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.6s ease forwards;
+  }
+  .hero-sub strong { color: var(--white); font-weight: 500; }
+  .hero-cta {
+    margin-top: 44px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.8s ease forwards;
+  }
+  .btn-primary {
+    pointer-events: all;
+    padding: 14px 32px;
+    background: #5BC8F5;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+  .btn-secondary {
+    pointer-events: all;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-secondary:hover { border-color: #5BC8F5; color: #5BC8F5; }
+
+  /* Big number decoration */
+  .hero-number {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(200px, 28vw, 380px);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(91,200,245,0.08);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 1.2s 1s ease forwards;
+  }
+
+  /* SKILLS BAR */
+  .skills-bar {
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+  }
+  .skills-scroll {
+    display: flex;
+    gap: 48px;
+    animation: scrollLeft 20s linear infinite;
+    white-space: nowrap;
+  }
+  .skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-right: 48px;
+  }
+  .skill-pill .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #5BC8F5;
+    flex-shrink: 0;
+  }
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* SECTION COMMON */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 48px;
+  }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #5BC8F5;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: #5BC8F5;
+    opacity: 0.4;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 64px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 44px;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  .project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,140,66,0.04), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .project-card:hover::before { opacity: 1; }
+  .project-card:hover { border-color: rgba(91,200,245,0.3); transform: translateY(-3px); }
+
+  .project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .project-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #5BC8F5;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  .project-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .project-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .project-desc strong { color: var(--white); font-weight: 500; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .tag.highlight { border-color: rgba(255,255,255,0.4); color: #f5f5f0; background: rgba(255,255,255,0.05); }
+
+  .project-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .metric {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+  }
+  .metric-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #5BC8F5;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .metric-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* Visualization mockups */
+  .viz-mockup {
+    background: var(--pitch);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 20px;
+    padding-top: 44px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  .viz-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    position: absolute;
+    top: 16px; left: 20px;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 4px; height: 120px; }
+  .bar {
+    flex: 1;
+    background: #5BC8F5;
+    opacity: 0.7;
+    border-radius: 1px 1px 0 0;
+    transition: opacity 0.2s;
+    transform-origin: bottom;
+  }
+  .bar:nth-child(odd) { opacity: 0.4; }
+  .bar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .scatter-plot { position: relative; height: 160px; margin-top: 20px; }
+  .scatter-dot {
+    position: absolute;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #5BC8F5;
+    opacity: 0.7;
+    animation: popIn 0.3s ease forwards;
+    animation-delay: var(--delay);
+    transform: scale(0);
+  }
+  .scatter-dot.red { background: var(--red); opacity: 0.6; }
+  .scatter-dot.yellow { background: var(--accent); opacity: 0.8; }
+
+  .heatmap { display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; margin-top: 28px; }
+  .heat-cell {
+    aspect-ratio: 1;
+    border-radius: 1px;
+    opacity: var(--intensity);
+    background: #5BC8F5;
+  }
+
+  .line-chart { position: relative; height: 120px; margin-top: 28px; overflow: hidden; }
+  .line-chart svg { width: 100%; height: 100%; }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-text { font-size: 16px; line-height: 1.8; color: var(--muted); }
+  .about-text p + p { margin-top: 20px; }
+  .about-text strong { color: var(--white); font-weight: 500; }
+
+  .skill-groups { display: flex; flex-direction: column; gap: 24px; }
+  .skill-group-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #5BC8F5;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .skill-bars { display: flex; flex-direction: column; gap: 10px; }
+  .skill-bar-row { display: flex; align-items: center; gap: 14px; }
+  .skill-name {
+    font-size: 13px;
+    min-width: 80px;
+    color: var(--white);
+  }
+  .skill-track {
+    flex: 1;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    background: #5BC8F5;
+    width: var(--level);
+    transform-origin: left;
+    animation: expandBar 1s 0.5s ease forwards;
+    transform: scaleX(0);
+  }
+  .skill-pct {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    min-width: 30px;
+    text-align: right;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .contact-text { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .contact-links { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+  .contact-link {
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .contact-link:hover { border-color: #5BC8F5; color: #5BC8F5; }
+  .contact-link-icon {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #5BC8F5;
+    min-width: 60px;
+  }
+
+  .big-cta {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 8vw, 110px);
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .big-cta .outline {
+    -webkit-text-stroke: 1px rgba(245,245,240,0.2);
+    color: transparent;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 28px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  .footer-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #5BC8F5;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid rgba(91,200,245,0.3);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes growBar {
+    from { transform: scaleY(0); }
+    to   { transform: scaleY(1); }
+  }
+  @keyframes expandBar {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+  @keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 0.7; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 60px 24px; }
+    .hero { padding: 100px 24px 60px; }
+    .projects-grid, .project-card.featured { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: auto; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-number { display: none; }
+    .skills-bar { padding: 16px 24px; }
+    footer { padding: 20px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  .github-btn {
+    pointer-events: all;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #5BC8F5;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #5BC8F5;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .github-btn:hover {
+    background: rgba(91,200,245,0.1);
+    color: #5BC8F5;
+  }
+  .github-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="field-bg"></div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">NZ<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Data Analyst · Sports & Business Intelligence</div>
+    <h1>
+      NIKOLAS<br>
+      <span class="accent">ZEINER</span><br>
+      <span class="outline">PORTFOLIO</span>
+    </h1>
+    <p class="hero-sub">
+      Turning raw data into <strong>winning decisions</strong>. From World Cup analytics to NBA salary modeling, Phoenix real estate to public safety — I bridge the gap between numbers and strategy using <strong>SQL, R, Power BI, Tableau, Excel & Python</strong>.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-number">10</div>
+</section>
+
+<!-- SKILLS BAR -->
+<div class="skills-bar">
+  <div class="skills-scroll">
+    <div class="skill-pill"><span class="dot"></span>SQL</div>
+    <div class="skill-pill"><span class="dot"></span>Power BI</div>
+    <div class="skill-pill"><span class="dot"></span>Tableau</div>
+    <div class="skill-pill"><span class="dot"></span>R / ggplot2</div>
+    <div class="skill-pill"><span class="dot"></span>Excel & VBA</div>
+    <div class="skill-pill"><span class="dot"></span>Python</div>
+    <div class="skill-pill"><span class="dot"></span>Data Storytelling</div>
+    <div class="skill-pill"><span class="dot"></span>Sports Analytics</div>
+    <div class="skill-pill"><span class="dot"></span>KPI Dashboards</div>
+    <div class="skill-pill"><span class="dot"></span>Statistical Modeling</div>
+    <!-- duplicated for infinite scroll -->
+    <div class="skill-pill"><span class="dot"></span>SQL</div>
+    <div class="skill-pill"><span class="dot"></span>Power BI</div>
+    <div class="skill-pill"><span class="dot"></span>Tableau</div>
+    <div class="skill-pill"><span class="dot"></span>R / ggplot2</div>
+    <div class="skill-pill"><span class="dot"></span>Excel & VBA</div>
+    <div class="skill-pill"><span class="dot"></span>Python</div>
+    <div class="skill-pill"><span class="dot"></span>Data Storytelling</div>
+    <div class="skill-pill"><span class="dot"></span>Sports Analytics</div>
+    <div class="skill-pill"><span class="dot"></span>KPI Dashboards</div>
+    <div class="skill-pill"><span class="dot"></span>Statistical Modeling</div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Work</div>
+  <div class="section-title">FEATURED PROJECTS</div>
+  <p class="section-sub">Five industry analyses — sports analytics, retail, real estate, NBA salary intelligence, and public safety — demonstrating versatile analytical depth across all 6 tools.</p>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 — World Cup / Featured -->
+    <div class="project-card featured reveal">
+      <div>
+        <div class="project-num">01 / SPORTS ANALYTICS</div>
+        <div class="project-title">2018 FIFA WORLD CUP ANALYTICS DASHBOARD</div>
+        <p class="project-desc">
+          Analyzed 227,000+ events from the 2018 FIFA World Cup using <strong>StatsBomb open data</strong>, pulled via Python. Built a Tableau dashboard covering team xG vs actual goals, shot outcomes by team, pass completion rates, and match momentum charts. Croatia led the tournament in xG — a key insight hidden in the data.
+        </p>
+        <div class="tags">
+          <span class="tag highlight">Python</span>
+          <span class="tag highlight">Tableau</span>
+          <span class="tag">StatsBomb API</span>
+          <span class="tag">xG Modeling</span>
+          <span class="tag">Sports Analytics</span>
+        </div>
+        <div class="project-metrics">
+          <div class="metric">
+            <div class="metric-val">227K+</div>
+            <div class="metric-label">Events Analyzed</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">32</div>
+            <div class="metric-label">Teams Covered</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">19</div>
+            <div class="metric-label">Matches</div>
+          </div>
+        <br><br><a href="https://github.com/NikolasZeiner/WorldCup2018Analysis" target="_blank" rel="noopener noreferrer" style="color:#5BC8F5;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid #5BC8F5;padding:8px 16px;display:inline-block;margin-top:16px;font-family:monospace;position:relative;z-index:999;">→ VIEW ON GITHUB</a>
+        </div>
+      </div>
+      <div>
+        <div class="viz-mockup" style="min-height:280px;">
+          <div class="viz-title">Team xG vs Actual Goals — 2018 World Cup</div>
+          <div style="display:flex;align-items:flex-end;gap:4px;height:120px;margin-top:40px;width:100%;">
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.8;height:100%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">CRO</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:85%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">ENG</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.8;height:78%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">BEL</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:72%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">BRA</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.8;height:65%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">FRA</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#f5f5f0;opacity:0.9;height:58%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">ARG</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:50%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">ESP</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.6;height:42%;border-radius:1px 1px 0 0;"></div><div style="font-size:7px;color:#8a8f9e;margin-top:3px;">GER</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px;">
+            <span style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(91,200,245,0.3);">LOW xG</span>
+            <span style="font-family:'DM Mono',monospace;font-size:9px;color:#5BC8F5;">HIGH xG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 — Retail -->
+    <div class="project-card reveal">
+      <div class="project-num">02 / RETAIL</div>
+      <div class="project-title">RETAIL SALES & INVENTORY OPTIMIZER</div>
+      <p class="project-desc">
+        Built a 3-page <strong>Power BI dashboard</strong> using the Sample Superstore dataset analyzing sales performance, product profitability, and shipping operations. Used <strong>DAX</strong> for 10 custom measures including YoY growth, running totals, and loss order rates. Tables and Bookcases identified as consistent loss leaders despite high sales volume.
+      </p>
+      <div class="tags">
+        <span class="tag highlight">Power BI</span>
+        <span class="tag highlight">DAX</span>
+        <span class="tag highlight">Excel</span>
+        <span class="tag">KPI Design</span>
+        <span class="tag">Profitability Analysis</span>
+      </div>
+      <div class="viz-mockup">
+        <div class="viz-title">Monthly Sales Trend by Year</div>
+        <div style="display:flex;align-items:flex-end;gap:4px;height:120px;margin-top:36px;width:100%;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:45%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">JAN</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.6;height:52%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">MAR</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:60%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">MAY</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.6;height:55%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">JUL</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.7;height:72%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">SEP</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#f5f5f0;opacity:0.95;height:100%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">NOV</div></div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end;"><div style="width:100%;background:#5BC8F5;opacity:0.8;height:88%;border-radius:1px 1px 0 0;"></div><div style="font-size:8px;color:#8a8f9e;margin-top:3px;">DEC</div></div>
+        </div>
+      </div>
+      <div class="project-metrics" style="margin-top:20px;">
+        <div class="metric"><div class="metric-val">$2.3M</div><div class="metric-label">Total Sales</div></div>
+        <div class="metric"><div class="metric-val">5K</div><div class="metric-label">Orders</div></div>
+        <div class="metric"><div class="metric-val">12.5%</div><div class="metric-label">Profit Margin</div></div>
+      </div>
+      <br><br><a href="https://github.com/NikolasZeiner/RetailSalesDashboard" target="_blank" rel="noopener noreferrer" style="color:#5BC8F5;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid #5BC8F5;padding:8px 16px;display:inline-block;margin-top:16px;font-family:monospace;position:relative;z-index:999;">→ VIEW ON GITHUB</a>
+    </div>
+
+    <!-- PROJECT 3 — Real Estate -->
+    <div class="project-card reveal">
+      <div class="project-num">03 / REAL ESTATE</div>
+      <div class="project-title">PHOENIX METRO REAL ESTATE DASHBOARD</div>
+      <p class="project-desc">
+        Built a regression model in <strong>R</strong> to analyze 5,000 Phoenix Metro home sales across 12 neighborhoods (2021–2023). Visualized median price by neighborhood, price per sqft, days on market, and monthly trends in <strong>Tableau</strong>. Paradise Valley median home price exceeded $1.2M vs $340K in Avondale — a 3.5x market gap.
+      </p>
+      <div class="tags">
+        <span class="tag highlight">R</span>
+        <span class="tag highlight">Tableau</span>
+        <span class="tag highlight">Excel</span>
+        <span class="tag">Regression Modeling</span>
+        <span class="tag">Phoenix Market</span>
+        <span class="tag">Geo Analysis</span>
+      </div>
+      <div class="viz-mockup">
+        <div class="viz-title">Median Sale Price vs Square Footage</div>
+        <div class="scatter-plot">
+          <div class="scatter-dot" style="left:12%;top:75%;--delay:0.05s"></div>
+          <div class="scatter-dot" style="left:20%;top:68%;--delay:0.1s"></div>
+          <div class="scatter-dot red" style="left:30%;top:80%;--delay:0.15s"></div>
+          <div class="scatter-dot" style="left:38%;top:55%;--delay:0.2s"></div>
+          <div class="scatter-dot" style="left:45%;top:48%;--delay:0.25s"></div>
+          <div class="scatter-dot yellow" style="left:54%;top:35%;width:10px;height:10px;--delay:0.3s"></div>
+          <div class="scatter-dot" style="left:60%;top:42%;--delay:0.35s"></div>
+          <div class="scatter-dot" style="left:68%;top:28%;--delay:0.4s"></div>
+          <div class="scatter-dot yellow" style="left:76%;top:20%;width:9px;height:9px;--delay:0.45s"></div>
+          <div class="scatter-dot" style="left:84%;top:30%;--delay:0.5s"></div>
+          <div class="scatter-dot red" style="left:25%;top:62%;--delay:0.55s"></div>
+          <div class="scatter-dot" style="left:92%;top:14%;--delay:0.6s"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 200 100" preserveAspectRatio="none">
+            <line x1="10" y1="88" x2="190" y2="12" stroke="rgba(255,140,66,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+          </svg>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;">
+          <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--muted);">← SQUARE FOOTAGE →</span>
+          <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--grass);">5,000 homes analyzed</span>
+        </div>
+      </div>
+      <br><br><a href="https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis" target="_blank" rel="noopener noreferrer" style="color:#5BC8F5;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid #5BC8F5;padding:8px 16px;display:inline-block;margin-top:16px;font-family:monospace;position:relative;z-index:999;">→ VIEW ON GITHUB</a>
+    </div>
+
+    <!-- PROJECT 4 — NBA (full width) -->
+    <div class="project-card reveal" style="grid-column: 1 / -1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="project-num">04 / SPORTS & FINANCE · ALL 6 TOOLS</div>
+          <div class="project-title">NBA SALARY & PERFORMANCE INTELLIGENCE</div>
+          <p class="project-desc">
+            The most comprehensive project in this portfolio — using <strong>all 6 tools</strong>. Cleaned and engineered value metrics in <strong>Python</strong>, performed regression and statistical analysis in <strong>R</strong>, ran 5 analytical queries in <strong>SQL</strong>, built a 3-page interactive dashboard in <strong>Power BI</strong>, and created a 6-sheet workbook with PivotTables, XLOOKUP, and COUNTIFS in <strong>Excel</strong>. Key finding: John Wall earned $47M while barely playing — the worst value contract in the league.
+          </p>
+          <div class="tags">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">R</span>
+            <span class="tag highlight">SQL</span>
+            <span class="tag highlight">Power BI</span>
+            <span class="tag highlight">Excel</span>
+            <span class="tag">Value Modeling</span>
+            <span class="tag">Salary Analytics</span>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;font-style:italic;border-left:2px solid rgba(91,200,245,0.3);padding-left:14px;">
+            "The only project in this portfolio using all 6 tools — Python for prep, R for stats, SQL for queries, Power BI for dashboards, and Excel for executive reporting."
+          </p>
+          <br><br><a href="https://github.com/NikolasZeiner/NBA-Salary-Analysis" target="_blank" rel="noopener noreferrer" style="color:#5BC8F5;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid #5BC8F5;padding:8px 16px;display:inline-block;margin-top:16px;font-family:monospace;position:relative;z-index:999;">→ VIEW ON GITHUB</a>
+          <p style="display:none">
+          </p>
+        </div>
+        <div>
+          <div class="viz-mockup" style="min-height:250px;">
+            <div class="viz-title">Salary vs Points Per Game — 2022-23 NBA</div>
+            <div class="scatter-plot" style="height:160px;margin-top:20px;">
+              <div class="scatter-dot" style="left:8%;top:80%;--delay:0.05s"></div>
+              <div class="scatter-dot" style="left:15%;top:70%;--delay:0.1s"></div>
+              <div class="scatter-dot" style="left:22%;top:65%;--delay:0.15s"></div>
+              <div class="scatter-dot red" style="left:30%;top:55%;--delay:0.2s"></div>
+              <div class="scatter-dot" style="left:38%;top:48%;--delay:0.25s"></div>
+              <div class="scatter-dot yellow" style="left:48%;top:35%;width:10px;height:10px;--delay:0.3s"></div>
+              <div class="scatter-dot" style="left:55%;top:40%;--delay:0.35s"></div>
+              <div class="scatter-dot red" style="left:65%;top:60%;--delay:0.4s"></div>
+              <div class="scatter-dot yellow" style="left:75%;top:25%;width:9px;height:9px;--delay:0.45s"></div>
+              <div class="scatter-dot" style="left:85%;top:20%;--delay:0.5s"></div>
+              <div class="scatter-dot red" style="left:90%;top:65%;--delay:0.55s"></div>
+              <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 200 160" preserveAspectRatio="none">
+                <line x1="5" y1="145" x2="195" y2="15" stroke="rgba(91,200,245,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+              </svg>
+            </div>
+            <div style="display:flex;gap:16px;margin-top:8px;">
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--grass);">● Good Value</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--red);">● Overpaid</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:#5BC8F5;">● Elite</span>
+            </div>
+          </div>
+          <div class="project-metrics" style="margin-top:2px;">
+            <div class="metric"><div class="metric-val">376</div><div class="metric-label">Players Analyzed</div></div>
+            <div class="metric"><div class="metric-val">5</div><div class="metric-label">Tools Used</div></div>
+            <div class="metric"><div class="metric-val">$9.99M</div><div class="metric-label">Avg NBA Salary</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5 — Public Safety -->
+    <div class="project-card reveal" style="grid-column: 1 / -1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="project-num">05 / PUBLIC SAFETY</div>
+          <div class="project-title">CRIME PATTERN & RESOURCE DEPLOYMENT ANALYSIS</div>
+          <p class="project-desc">
+            Analyzed 3 years of simulated municipal incident data across 12 districts using <strong>SQL</strong> for CAD data queries, <strong>R</strong> for time-series decomposition, and <strong>Power BI</strong> for a 3-page operational dashboard. Night shift showed 30% longer response times than day shift — a direct deployment optimization opportunity for command staff.
+          </p>
+          <div class="tags">
+            <span class="tag highlight">Power BI</span>
+            <span class="tag highlight">SQL</span>
+            <span class="tag highlight">R</span>
+            <span class="tag">Time-Series Analysis</span>
+            <span class="tag">Resource Optimization</span>
+            <span class="tag">Public Safety</span>
+          </div>
+        </div>
+        <div>
+          <div class="viz-mockup" style="min-height:200px;">
+            <div class="viz-title">Incident Volume by Hour of Day</div>
+            <div class="line-chart" style="height:140px;margin-top:24px;">
+              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="lgPS" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff3b30" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#ff3b30" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 80 C15 78,25 72,38 65 S55 50,68 58 S82 70,95 75 S110 78,125 76 S140 70,155 62 S168 48,180 38 S195 28,210 35 S225 55,238 65 S255 72,268 68 S282 60,300 55 L300 100 L0 100 Z" fill="url(#lgPS)"/>
+                <path d="M0 80 C15 78,25 72,38 65 S55 50,68 58 S82 70,95 75 S110 78,125 76 S140 70,155 62 S168 48,180 38 S195 28,210 35 S225 55,238 65 S255 72,268 68 S282 60,300 55" fill="none" stroke="#ff3b30" stroke-width="1.5" opacity="0.8"/>
+                <circle cx="180" cy="38" r="3" fill="#5BC8F5"/>
+                <text x="183" y="35" font-size="6" fill="#5BC8F5" font-family="monospace">PEAK 2AM</text>
+                <line x1="75" y1="0" x2="75" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <line x1="150" y1="0" x2="150" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <line x1="225" y1="0" x2="225" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-metrics" style="margin-top:2px;">
+            <div class="metric"><div class="metric-val">6K</div><div class="metric-label">Incidents</div></div>
+            <div class="metric"><div class="metric-val">12</div><div class="metric-label">Districts</div></div>
+            <div class="metric"><div class="metric-val">-19%</div><div class="metric-label">Response Time</div></div>
+          </div>
+          <br><br><a href="https://github.com/NikolasZeiner/CrimePatternAnalysis" target="_blank" rel="noopener noreferrer" style="color:#5BC8F5;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid #5BC8F5;padding:8px 16px;display:inline-block;margin-top:16px;font-family:monospace;position:relative;z-index:999;">→ VIEW ON GITHUB</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" style="background: var(--card-bg); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-label">Background</div>
+  <div class="section-title">ABOUT ME</div>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>
+        I'm <strong>Nikolas J. Zeiner</strong>, a Business Analytics graduate based in <strong>Chandler, AZ</strong> with a Master of Science in Business Analytics (GPA 3.31) and a BS in Business Analytics with a Minor in Accounting — both from <strong>Grand Canyon University, Colangelo College of Business</strong>.
+      </p>
+      <p>
+        At <strong>Honeywell Aerospace</strong>, I built Tableau dashboards and automated reports that enhanced decision-making for engineering operations, and partnered with the EDM Automation team to standardize dashboards organization-wide. At <strong>Leslie's Pools</strong>, I designed a Power BI scorecard dashboard used across 950+ store locations, built SQL pipelines for operational data, and created Excel dashboards with advanced functions including VLOOKUP, XLOOKUP, and PivotTables.
+      </p>
+      <p>
+        My capstone project applied <strong>Logistic Regression, Random Forest, and Gradient Boosting in R</strong> alongside Monte Carlo simulations in Power BI to forecast SLA breaches and inventory risk — the kind of end-to-end thinking I bring to every dataset.
+      </p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px;">
+      <!-- Education -->
+      <div>
+        <div class="skill-group-label">Education</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">M.S. Business Analytics</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Grand Canyon University · 2025 · GPA 3.31</div>
+          </div>
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">B.S. Business Analytics, Minor in Accounting</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Grand Canyon University · 2023 · GPA 3.26</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <div class="skill-group-label">Experience</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">Engineer Program Management Intern</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Honeywell Aerospace · Phoenix, AZ · Jun–Sep 2025</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;">Tableau dashboards & automated reports for aerospace engineering ops. Standardized dashboards org-wide with the EDM Automation team.</div>
+          </div>
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">Retail Operations Intern</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Leslie's Pools · Summer 2024</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;">Power BI scorecard dashboard across 950+ stores. SQL pipelines for operational data. Advanced Excel dashboards (VLOOKUP, XLOOKUP, PivotTables).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div>
+        <div class="skill-group-label">Technical Skills</div>
+        <div class="skill-bars">
+          <div class="skill-bar-row">
+            <span class="skill-name">Excel</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:95%"></div></div>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-name">SQL</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:90%"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-name">Tableau</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:90%"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-name">Power BI</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:88%"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-name">R Studio</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:80%"></div></div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-name">Python</span>
+            <div class="skill-track"><div class="skill-fill" style="--level:55%"></div></div>
+            <span class="skill-pct">55%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div>
+      <div class="section-label">Let's Talk</div>
+      <div class="big-cta">
+        READY<br>
+        TO<br>
+        <span class="accent">ANALYZE.</span>
+      </div>
+      <p class="contact-text" style="margin-top:28px;">
+        Open to analyst roles across sports, retail, real estate, finance, public safety, and beyond. Let's turn your data into decisions.
+      </p>
+    </div>
+    <div>
+      <div class="contact-links">
+        <a href="mailto:nzeiner@gmail.com" class="contact-link">
+          <span class="contact-link-icon">EMAIL</span>
+          nzeiner@gmail.com
+        </a>
+        <a href="tel:4805280857" class="contact-link">
+          <span class="contact-link-icon">PHONE</span>
+          (480) 528-0857
+        </a>
+        <a href="https://linkedin.com/in/nikolaszeiner" class="contact-link" target="_blank">
+          <span class="contact-link-icon">LINKEDIN</span>
+          linkedin.com/in/nikolaszeiner
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">LOCATION</span>
+          Chandler, AZ
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 Nikolas Zeiner — Data Analyst Portfolio</div>
+  <div class="footer-badge">Available for Hire</div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
