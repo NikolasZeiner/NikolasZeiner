@@ -23,6 +23,8 @@
 End-to-end analysis of 376 NBA players using all 6 tools — Python, R, SQL, Power BI, and Excel.
 Identified the most overpaid and undervalued players in the 2022-23 season.
 
+![NBA Dashboard](https://raw.githubusercontent.com/NikolasZeiner/NBA-Salary-Analysis/main/PlayerValueAnalysis.png)
+
 `Python` `R` `SQL` `Power BI` `Excel` `Sports Analytics`
 
 ---
@@ -30,6 +32,8 @@ Identified the most overpaid and undervalued players in the 2022-23 season.
 ### 🏠 [Phoenix Metro Real Estate Analysis](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis)
 Regression model analyzing 5,000 Phoenix home sales across 12 neighborhoods.
 Paradise Valley median price 3.5x higher than Avondale.
+
+![Real Estate Dashboard](https://raw.githubusercontent.com/NikolasZeiner/PhoenixRealEstateAnalysis/main/PricebyNeighborhood.png)
 
 `R` `Tableau` `Regression Modeling` `Phoenix Market`
 
@@ -39,6 +43,8 @@ Paradise Valley median price 3.5x higher than Avondale.
 Analyzed 227,000+ match events using StatsBomb open data pulled via Python.
 Croatia led the tournament in xG despite losing the final.
 
+![World Cup Dashboard](https://raw.githubusercontent.com/NikolasZeiner/WorldCup2018Analysis/main/Dashboard.png)
+
 `Python` `Tableau` `StatsBomb API` `xG Modeling`
 
 ---
@@ -47,6 +53,8 @@ Croatia led the tournament in xG despite losing the final.
 3-page Power BI dashboard with 10 DAX measures analyzing sales,
 profitability, and shipping operations across 4 U.S. regions.
 
+![Retail Dashboard](https://raw.githubusercontent.com/NikolasZeiner/RetailSalesDashboard/main/ExecutiveDashboard.png)
+
 `Power BI` `DAX` `Excel` `Retail Analytics`
 
 ---
@@ -54,6 +62,8 @@ profitability, and shipping operations across 4 U.S. regions.
 ### 🚔 [Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis)
 Analyzed 6,000 incidents across 12 districts using SQL, R, and Power BI.
 Night shift showed 30% longer response times — a key deployment insight.
+
+![Crime Dashboard](https://raw.githubusercontent.com/NikolasZeiner/CrimePatternAnalysis/main/CommandOverview.png)
 
 `Power BI` `SQL` `R` `Public Safety Analytics`
 
