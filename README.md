@@ -19,53 +19,13 @@
 
 ## 📁 Featured Projects
 
-### 🏀 [NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis)
-End-to-end analysis of 376 NBA players using all 6 tools — Python, R, SQL, Power BI, and Excel.
-Identified the most overpaid and undervalued players in the 2022-23 season.
-
-![NBA Dashboard](https://raw.githubusercontent.com/NikolasZeiner/NBA-Salary-Analysis/main/PlayerValueAnalysis.png)
-
-`Python` `R` `SQL` `Power BI` `Excel` `Sports Analytics`
-
----
-
-### 🏠 [Phoenix Metro Real Estate Analysis](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis)
-Regression model analyzing 5,000 Phoenix home sales across 12 neighborhoods.
-Paradise Valley median price 3.5x higher than Avondale.
-
-![Real Estate Dashboard](https://raw.githubusercontent.com/NikolasZeiner/PhoenixRealEstateAnalysis/main/PricebyNeighborhood.png)
-
-`R` `Tableau` `Regression Modeling` `Phoenix Market`
-
----
-
-### ⚽ [2018 FIFA World Cup Analytics](https://github.com/NikolasZeiner/WorldCup2018Analysis)
-Analyzed 227,000+ match events using StatsBomb open data pulled via Python.
-Croatia led the tournament in xG despite losing the final.
-
-![World Cup Dashboard](https://raw.githubusercontent.com/NikolasZeiner/WorldCup2018Analysis/main/Dashboard.png)
-
-`Python` `Tableau` `StatsBomb API` `xG Modeling`
-
----
-
-### 🛍️ [Retail Sales Intelligence Dashboard](https://github.com/NikolasZeiner/RetailSalesDashboard)
-3-page Power BI dashboard with 10 DAX measures analyzing sales,
-profitability, and shipping operations across 4 U.S. regions.
-
-![Retail Dashboard](https://raw.githubusercontent.com/NikolasZeiner/RetailSalesDashboard/main/ExecutiveDashboard.png)
-
-`Power BI` `DAX` `Excel` `Retail Analytics`
-
----
-
-### 🚔 [Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis)
-Analyzed 6,000 incidents across 12 districts using SQL, R, and Power BI.
-Night shift showed 30% longer response times — a key deployment insight.
-
-![Crime Dashboard](https://raw.githubusercontent.com/NikolasZeiner/CrimePatternAnalysis/main/CommandOverview.png)
-
-`Power BI` `SQL` `R` `Public Safety Analytics`
+| Project | Tools | Link |
+|---|---|---|
+| 🏀 NBA Salary & Performance | Python · R · SQL · Power BI · Excel | [View](https://github.com/NikolasZeiner/NBA-Salary-Analysis) |
+| 🏠 Phoenix Real Estate | R · Tableau | [View](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) |
+| ⚽ 2018 World Cup Analytics | Python · Tableau | [View](https://github.com/NikolasZeiner/WorldCup2018Analysis) |
+| 🛍️ Retail Sales Dashboard | Power BI · DAX · Excel | [View](https://github.com/NikolasZeiner/RetailSalesDashboard) |
+| 🚔 Crime Pattern Analysis | Power BI · SQL · R | [View](https://github.com/NikolasZeiner/CrimePatternAnalysis) |
 
 ---
 
