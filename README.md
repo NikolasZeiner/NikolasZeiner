@@ -3,7 +3,7 @@
 
 📊 M.S. Business Analytics — Grand Canyon University (GPA 3.31)  
 📊 B.S. Business Analytics, Minor in Accounting — Grand Canyon University (GPA 3.26)  
-💼 Former Intern @ Honeywell Aerospace & Leslie's Pools  
+💼 Former Intern @ Honeywell Aerospace & Leslie Pools  
 🌐 Portfolio: [nikolaszeiner.github.io/NikolasZeiner](https://nikolaszeiner.github.io/NikolasZeiner/)  
 📄 [Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas%20Zeiner.pdf)
 
