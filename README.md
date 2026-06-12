@@ -1,7 +1,8 @@
 # Hi, I'm Nikolas Zeiner 👋
 **Data Analyst | Chandler, AZ**
 
-📊 MS in Business Analytics — Grand Canyon University (GPA 3.31)  
+📊 M.S. Business Analytics — Grand Canyon University (GPA 3.31)  
+📊 B.S. Business Analytics, Minor in Accounting — Grand Canyon University (GPA 3.26)  
 💼 Former Intern @ Honeywell Aerospace & Leslie's Pools  
 🌐 Portfolio: [nikolaszeiner.github.io/NikolasZeiner](https://nikolaszeiner.github.io/NikolasZeiner/)  
 📄 [Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas%20Zeiner.pdf)
