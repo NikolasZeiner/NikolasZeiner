@@ -4,7 +4,7 @@
 📊 MS in Business Analytics — Grand Canyon University (GPA 3.31)  
 💼 Former Intern @ Honeywell Aerospace & Leslie's Pools  
 🌐 Portfolio: [nikolaszeiner.github.io/NikolasZeiner](https://nikolaszeiner.github.io/NikolasZeiner/)  
-📄 [Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner.pdf)
+📄 [Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas%20Zeiner.pdf)
 
 ---
 
