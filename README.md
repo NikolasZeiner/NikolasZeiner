@@ -1,4 +1,4 @@
-# Hi there, I'm Nikolas Zeiner 👋
+# Hi there, I'm Nikolas Zeiner 
 
 **Data Analyst | MS Business Analytics | GCU**
 
@@ -25,28 +25,4 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 | Project | Tools | Description |
 |---|---|---|
 | [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players |
-| [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Price drivers and neighborhood comparison across 12 Phoenix neighborhoods |
-| [⚽ 2018 FIFA World Cup Analytics](https://github.com/NikolasZeiner/WorldCup2018Analysis) | Python, Tableau | 227K+ StatsBomb events — xG, passing, shot analysis |
-| [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | 3-page dashboard with 10 DAX measures including YoY time intelligence |
-| [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Patrol resource optimization across 12 districts |
-| [🌍 2026 FIFA World Cup Live Tracker](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | Live updating dashboard pulling real-time World Cup data daily |
-
----
-
-## 🎓 Education
-
-**MS Business Analytics** — Grand Canyon University (GPA 3.31)
-**BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
-
----
-
-## 💼 Experience
-
-**Honeywell Aerospace** — Data Analytics Intern (Jun–Sep 2025)
-**Leslie's Pools** — Retail Operations Intern (Summer 2024)
-
----
-
-## 📬 Contact
-
-📧 nzeiner@gmail.com | 📍 Chandler, AZ | 📞 (480) 528-0857
+|
