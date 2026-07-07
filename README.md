@@ -1,37 +1,52 @@
-# Hi, I'm Nikolas Zeiner 
-**Data Analyst | Chandler, AZ**
+# Hi there, I'm Nikolas Zeiner 👋
 
-📊 M.S. Business Analytics — Grand Canyon University (GPA 3.31)  
-📊 B.S. Business Analytics, Minor in Accounting — Grand Canyon University (GPA 3.26)  
-💼 Former Intern @ Honeywell Aerospace & Leslie Pools  
-🌐 Portfolio: [nikolaszeiner.github.io/NikolasZeiner](https://nikolaszeiner.github.io/NikolasZeiner/)  
-📄 [Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas%20Zeiner.pdf)
+**Data Analyst | MS Business Analytics | GCU**
+
+I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, and Excel. Currently seeking data analyst roles in the Phoenix, AZ area.
+
+📄 **[Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf)**
+🌐 **[Portfolio Website](https://nikolaszeiner.github.io/NikolasZeiner/)**
 
 ---
 
-## 🛠️ Technical Skills
+## 🛠️ Skills
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
 
 ---
 
-## 📁 Featured Projects
+## 📊 Portfolio Projects
 
-| Project | Tools | Link |
+| Project | Tools | Description |
 |---|---|---|
-| 🏀 NBA Salary & Performance | Python · R · SQL · Power BI · Excel | [View](https://github.com/NikolasZeiner/NBA-Salary-Analysis) |
-| 🏠 Phoenix Real Estate | R · Tableau | [View](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) |
-| ⚽ 2018 World Cup Analytics | Python · Tableau | [View](https://github.com/NikolasZeiner/WorldCup2018Analysis) |
-| 🛍️ Retail Sales Dashboard | Power BI · DAX · Excel | [View](https://github.com/NikolasZeiner/RetailSalesDashboard) |
-| 🚔 Crime Pattern Analysis | Power BI · SQL · R | [View](https://github.com/NikolasZeiner/CrimePatternAnalysis) |
+| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players |
+| [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Price drivers and neighborhood comparison across 12 Phoenix neighborhoods |
+| [⚽ 2018 FIFA World Cup Analytics](https://github.com/NikolasZeiner/WorldCup2018Analysis) | Python, Tableau | 227K+ StatsBomb events — xG, passing, shot analysis |
+| [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | 3-page dashboard with 10 DAX measures including YoY time intelligence |
+| [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Patrol resource optimization across 12 districts |
+| [🌍 2026 FIFA World Cup Live Tracker](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | Live updating dashboard pulling real-time World Cup data daily |
+
+---
+
+## 🎓 Education
+
+**MS Business Analytics** — Grand Canyon University (GPA 3.31)
+**BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
+
+---
+
+## 💼 Experience
+
+**Honeywell Aerospace** — Data Analytics Intern (Jun–Sep 2025)
+**Leslie's Pools** — Retail Operations Intern (Summer 2024)
 
 ---
 
 ## 📬 Contact
-📧 nzeiner@gmail.com  
-📍 Chandler, AZ  
-🌐 [Portfolio](https://nikolaszeiner.github.io/NikolasZeiner/)
+
+📧 nzeiner@gmail.com | 📍 Chandler, AZ | 📞 (480) 528-0857
