@@ -1,4 +1,4 @@
-# Hi, I'm Nikolas Zeiner 👋
+# Hi, I'm Nikolas Zeiner 
 **Data Analyst | Chandler, AZ**
 
 📊 M.S. Business Analytics — Grand Canyon University (GPA 3.31)  
