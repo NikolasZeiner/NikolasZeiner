@@ -47,6 +47,10 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 ---
 
+## Current Workplace: BV Lawncare
+
+---
+
 ## 📬 Contact
 
 📧 nzeiner@gmail.com | 📍 Chandler, AZ | 📞 (480) 528-0857
