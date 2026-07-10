@@ -22,12 +22,9 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 ## 📊 Portfolio Projects
 
-| Flagship Project | Tools | Description |
-|---|---|---|
-| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs. performance analysis for 376 NBA players — including a custom cost-efficiency metric (Points per Million $) and full team payroll benchmarking |
-
 | Project | Tools | Description |
 |---|---|---|
+| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs. performance analysis for 376 NBA players — including a custom cost-efficiency metric (Points per Million $) and full team payroll benchmarking |
 | [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Analyzed 5,000+ home sales across 12 Phoenix Metro neighborhoods (2021–2023). Examined price drivers including square footage, days on market, price per square foot, and monthly sale price trends by neighborhood. |
 | [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | Built a 3-page Power BI dashboard analyzing sales performance, product profitability, and shipping operations using the Sample Superstore dataset. Includes 7+ custom DAX measures |
 | [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Power BI dashboard for a city police department analyzing incident patterns, response performance, and district-level resource allocation. Covers command-level KPIs, operational metrics and district-level performance scorecards |
