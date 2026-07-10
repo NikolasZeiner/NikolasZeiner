@@ -28,7 +28,7 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 | [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Price drivers and neighborhood comparison across 12 Phoenix neighborhoods |
 | [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | 3-page dashboard with 10 DAX measures including YoY time intelligence |
 | [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Patrol resource optimization across 12 districts |
-| [🌍 2026 FIFA World Cup Tracker](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | Live updating dashboard pulling real-time World Cup data daily |
+| [🌍 2026 FIFA World Cup](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | Live updating dashboard pulling real-time World Cup data daily |
 
 ---
 
