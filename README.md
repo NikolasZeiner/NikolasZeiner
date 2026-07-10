@@ -22,7 +22,8 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 ## 📊 Portfolio Projects
 
-| Flagship Project | Tools | Description
+| Flagship Project | Tools | Description |
+|---|---|---|
 | [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players |
 
 | Project | Tools | Description |
