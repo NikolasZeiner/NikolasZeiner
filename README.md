@@ -41,8 +41,8 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 ## 💼 Experience
 
-**Honeywell Aerospace** — Data Analytics Intern (Jun–Sep 2025)
-**Leslie's Pools** — Retail Operations Intern (Summer 2024)
+**Honeywell Aerospace** — Engineer Program Management Intern (Jun–Sep 2025)
+**Leslie's Pools** — Retail Operations Analyst Intern (Summer 2024)
 
 ---
 
