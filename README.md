@@ -32,6 +32,7 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 | [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | Built a 3-page Power BI dashboard analyzing sales performance, product profitability, and shipping operations using the Sample Superstore dataset. Includes 7+ custom DAX measures |
 | [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Power BI dashboard for a city police department analyzing incident patterns, response performance, and district-level resource allocation. Covers command-level KPIs, operational metrics and district-level performance scorecards |
 | [🌍 2026 FIFA World Cup](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | A 3-page dashboard tracking goals, assists, possession, shots-on-target, pass completion, and card discipline across all 104 matches |
+| [📊 Investment Risk & Retirement Planning](https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning) | Python, yfinance, Monte Carlo Simulation | A 3-stage pipeline scoring client risk tolerance, validating allocations against real market data, and projecting 30-year retirement outcomes across 10,000 simulations |
 
 ---
 
