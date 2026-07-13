@@ -2,7 +2,7 @@
 
 **Data Analyst | MS Business Analytics | GCU**
 
-I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, and Excel. Currently seeking data analyst roles in the Phoenix, AZ area.
+I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, and Excel — turning raw data into dashboards, models, and insights that support better decision-making. Currently seeking analytics roles in the Phoenix, AZ area.
 
 📄 **[Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf)**
 🌐 **[Portfolio Website](https://nikolaszeiner.github.io/NikolasZeiner/)**
