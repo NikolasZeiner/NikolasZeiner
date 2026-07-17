@@ -1,4 +1,5 @@
-# Hi there, I'm Nikolas Zeiner 
+# Hi there, I'm Nikolas Zeiner 👋
+
 **Data Analyst | MS Business Analytics | GCU**
 
 I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, and Excel — turning raw data into dashboards, models, and insights that support better decision-making. Currently seeking analytics roles in the Phoenix, AZ area.
@@ -9,6 +10,7 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 ---
 
 ## 🛠️ Skills
+
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
@@ -18,14 +20,27 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 ---
 
-## 📊 Portfolio Projects
+## 📊 Featured Projects
+
 | Project | Tools | Description |
 |---|---|---|
-| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs. performance analysis for 376 NBA players — including a custom cost-efficiency metric (Points per Million $) and full team payroll benchmarking |
-| [📊 Investment Risk & Retirement Planning](https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning) | Python, yfinance, Monte Carlo Simulation | A 3-stage pipeline scoring client risk tolerance, validating allocations against real market data, and projecting 30-year retirement outcomes across 10,000 simulations |
-| [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Analyzed 5,000+ home sales across 12 Phoenix Metro neighborhoods (2021–2023). Examined price drivers including square footage, days on market, price per square foot, and monthly sale price trends by neighborhood. |
-| [🌍 2026 FIFA World Cup](https://github.com/NikolasZeiner/WorldCup2026) | Python, Power BI, ESPN API | A 3-page dashboard tracking goals, assists, possession, shots-on-target, pass completion, and card discipline across all 104 matches |
-| [📦 Supply Chain Performance & Inventory Risk](https://github.com/NikolasZeiner) | Python, SQL, Power BI, Excel | *In Progress* — Analyzing 1,000 simulated purchase orders across 5 suppliers to identify delivery bottlenecks, late shipment patterns, and stockout risk, feeding into a Power BI dashboard on on-time delivery, lead time variance, and inventory turnover |
+| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players — custom Points per Million cost-efficiency metric and full team payroll benchmarking across all 6 tools |
+| [📊 Investment Risk & Retirement Planning](https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning) | Python, yfinance, Monte Carlo | 3-stage pipeline scoring client risk tolerance, stress-testing allocations against 5 years of live market data, and projecting 30-year retirement outcomes across 10,000 simulations |
+| [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Regression model and interactive Tableau dashboard analyzing 5,000+ home sales across 12 Phoenix Metro neighborhoods — 3.5x price gap identified between Paradise Valley and Avondale |
+| [🌍 2026 FIFA World Cup Analytics](https://github.com/NikolasZeiner/WorldCup2026-LiveTracker) | Python, Power BI, ESPN API | 3-page dashboard tracking goals, assists, possession, shots-on-target, pass completion, and card discipline across all 104 matches via automated ESPN API pipeline |
+| [📦 Supply Chain Performance & Risk](https://github.com/NikolasZeiner/Supply-Chain-Analytics) | Python, SQL, Power BI | 1,000 purchase orders across 5 suppliers — SupplierC at 49.3% on-time rate with $3.1M spend at risk. 5 SQL queries, 2-page Power BI dashboard with conditional formatting |
+
+---
+
+## 🔍 Additional Projects
+
+| Project | Tools | Description |
+|---|---|---|
+| [📊 Digital Workplace Adoption Dashboard](https://github.com/NikolasZeiner/Digital-Workplace-Adoption) | Python, Power BI | Tracks tool adoption, feature engagement, and retention risk across 300 colleagues — 97 high-risk users identified, adoption trending from 68.3% to 69.7% |
+| [🌐 Web Analytics & Telemetry Dashboard](https://github.com/NikolasZeiner/Web-Analytics-Telemetry) | Python, Power BI | 5,000 sessions across 6 channels — Email converts at 5.16% while Social Media drives 68% bounce rate with near-zero ROI |
+| [👥 Workforce Turnover Analysis](https://github.com/NikolasZeiner/WorkForce) | Excel | 29% turnover across 372 employees — Finance at 39.8%, 75% voluntary departures, 8 high-risk managers identified |
+| [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Night shift 30% longer response times — patrol resource optimization across 12 districts |
+| [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | 3-page dashboard with 10 DAX measures including YoY time intelligence — Tables and Bookcases identified as consistent loss leaders |
 
 ---
 
@@ -47,16 +62,19 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 ---
 
 ## 🎓 Education
+
 **MS Business Analytics** — Grand Canyon University (GPA 3.31)
 **BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
 
 ---
 
 ## 💼 Experience
+
 **Honeywell Aerospace** — Engineer Program Management Intern (Jun–Sep 2025)
 **Leslie's Pools** — Retail Operations Analyst Intern (Summer 2024)
 
 ---
 
 ## 📬 Contact
+
 📧 nzeiner@gmail.com | 📍 Chandler, AZ | 📞 (480) 528-0857
