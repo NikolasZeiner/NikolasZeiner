@@ -38,9 +38,6 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 |---|---|---|
 | [📊 Digital Workplace Adoption Dashboard](https://github.com/NikolasZeiner/Digital-Workplace-Adoption) | Python, Power BI | Tracks tool adoption, feature engagement, and retention risk across 300 colleagues — 97 high-risk users identified, adoption trending from 68.3% to 69.7% |
 | [🌐 Web Analytics & Telemetry Dashboard](https://github.com/NikolasZeiner/Web-Analytics-Telemetry) | Python, Power BI | 5,000 sessions across 6 channels — Email converts at 5.16% while Social Media drives 68% bounce rate with near-zero ROI |
-| [👥 Workforce Turnover Analysis](https://github.com/NikolasZeiner/WorkForce) | Excel | 29% turnover across 372 employees — Finance at 39.8%, 75% voluntary departures, 8 high-risk managers identified |
-| [🚔 Crime Pattern & Resource Deployment](https://github.com/NikolasZeiner/CrimePatternAnalysis) | Power BI, SQL, R | Night shift 30% longer response times — patrol resource optimization across 12 districts |
-| [🛍️ Retail Sales Intelligence](https://github.com/NikolasZeiner/RetailSalesDashboard) | Power BI, DAX, Excel | 3-page dashboard with 10 DAX measures including YoY time intelligence — Tables and Bookcases identified as consistent loss leaders |
 
 ---
 
