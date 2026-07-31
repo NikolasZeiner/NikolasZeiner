@@ -31,6 +31,7 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 ---
 
 ## 🔍 Additional Projects
+|---|---|---|
 | [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players — custom Points per Million cost-efficiency metric and full team payroll benchmarking across all 6 tools |
 | 🏀 NBA 2026-27 Season Live Tracker | Python, Power BI, ESPN API | *In Progress — launching October 2026* — Live dashboard tracking team standings, player stats, game results, and scoring leaders across the full NBA season via automated ESPN API pipeline |
 
