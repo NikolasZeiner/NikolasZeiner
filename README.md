@@ -43,8 +43,7 @@ Actively studying for the FINRA Securities Industry Essentials (SIE) exam
 
 **Industry Certifications (In Progress)**
 - PL-300: Microsoft Power BI Data Analyst
-- AWS Certified Data Engineer — Associate
-- DP-900: Microsoft Azure Data Fundamentals
+- Security Industry Essential Certification (SIE) 
 
 **Udemy Courses**
 - Learn Data Visualization Using Tableau: Zero to Hero ✅
