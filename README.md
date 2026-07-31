@@ -34,14 +34,6 @@ Actively studying for the FINRA Securities Industry Essentials (SIE) exam
 - PL-300: Microsoft Power BI Data Analyst
 - Security Industry Essential Certification (SIE) 
 
-**Udemy Courses**
-- Learn Data Visualization Using Tableau: Zero to Hero ✅
-- Excel Lookup Functions Deep Dive ✅
-- R Programming ✅
-- Microsoft Power BI — Up & Running with Power BI Desktop ✅
-- The Complete Snowflake & dbt Hands-On Course *(in progress)*
-- The Ultimate MySQL Bootcamp *(in progress)*
-
 ---
 
 ## 🎓 Education
