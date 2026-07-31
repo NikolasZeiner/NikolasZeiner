@@ -38,9 +38,9 @@ Actively studying for the FINRA Securities Industry Essentials (SIE) exam
 
 ## 🎓 Education
 
-MS Business Analytics** — Grand Canyon University (GPA 3.31)
+**MS Business Analytics** — Grand Canyon University (GPA 3.31)
 
-BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
+**BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
 
 ---
 
