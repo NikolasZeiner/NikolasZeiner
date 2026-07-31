@@ -24,20 +24,15 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 
 | Project | Tools | Description |
 |---|---|---|
-| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players — custom Points per Million cost-efficiency metric and full team payroll benchmarking across all 6 tools |
 | [📊 Investment Risk & Retirement Planning](https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning) | Python, yfinance, Monte Carlo | 3-stage pipeline scoring client risk tolerance, stress-testing allocations against 5 years of live market data, and projecting 30-year retirement outcomes across 10,000 simulations |
 | [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Regression model and interactive Tableau dashboard analyzing 5,000+ home sales across 12 Phoenix Metro neighborhoods — 3.5x price gap identified between Paradise Valley and Avondale |
 | [📦 Supply Chain Performance & Risk](https://github.com/NikolasZeiner/Supply-Chain-Analytics) | Python, SQL, Power BI | 1,000 purchase orders across 5 suppliers — SupplierC at 49.3% on-time rate with $3.1M spend at risk. 5 SQL queries, 2-page Power BI dashboard with conditional formatting |
-| 🏀 NBA 2026-27 Season Live Tracker | Python, Power BI, ESPN API | *In Progress — launching October 2026* — Live dashboard tracking team standings, player stats, game results, and scoring leaders across the full NBA season via automated ESPN API pipeline |
 
 ---
 
 ## 🔍 Additional Projects
-
-| Project | Tools | Description |
-|---|---|---|
-| [📊 Digital Workplace Adoption Dashboard](https://github.com/NikolasZeiner/Digital-Workplace-Adoption) | Python, Power BI | Tracks tool adoption, feature engagement, and retention risk across 300 colleagues — 97 high-risk users identified, adoption trending from 68.3% to 69.7% |
-| [🌐 Web Analytics & Telemetry Dashboard](https://github.com/NikolasZeiner/Web-Analytics-Telemetry) | Python, Power BI | 5,000 sessions across 6 channels — Email converts at 5.16% while Social Media drives 68% bounce rate with near-zero ROI |
+| [🏀 NBA Salary & Performance Analysis](https://github.com/NikolasZeiner/NBA-Salary-Analysis) | Python, R, SQL, Power BI, Excel | End-to-end salary vs performance analysis for 376 NBA players — custom Points per Million cost-efficiency metric and full team payroll benchmarking across all 6 tools |
+| 🏀 NBA 2026-27 Season Live Tracker | Python, Power BI, ESPN API | *In Progress — launching October 2026* — Live dashboard tracking team standings, player stats, game results, and scoring leaders across the full NBA season via automated ESPN API pipeline |
 
 ---
 
