@@ -1,6 +1,7 @@
 # Hi there, I'm Nikolas Zeiner 
 
-**Master of Science in Business Analytics - Grand Canyon University
+Master of Science in Business Analytics - Grand Canyon University
+Actively studying for the FINRA Securities Industry Essentials (SIE) exam
 
 📄 **[Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf)**
 🌐 **[Portfolio Website](https://nikolaszeiner.github.io/NikolasZeiner/)**
