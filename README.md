@@ -1,6 +1,6 @@
 # Hi there, I'm Nikolas Zeiner 
 
-** Master's of Science in Business Analytics - Grand Canyon University
+**Master of Science in Business Analytics - Grand Canyon University
 
 📄 **[Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf)**
 🌐 **[Portfolio Website](https://nikolaszeiner.github.io/NikolasZeiner/)**
