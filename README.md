@@ -43,8 +43,7 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 - Excel Lookup Functions Deep Dive ✅
 - R Programming ✅
 - Microsoft Power BI — Up & Running with Power BI Desktop ✅
-- The Complete Snowflake & dbt Hands-On Course *(In Progress)*
-- The Ultimate MySQL Bootcamp *(In Progress)*
+- The Ultimate MySQL Bootcamp ✅
 
 ---
 
