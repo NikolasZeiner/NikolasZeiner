@@ -38,14 +38,16 @@ Actively studying for the FINRA Securities Industry Essentials (SIE) exam
 
 ## 🎓 Education
 
-**MS Business Analytics** — Grand Canyon University (GPA 3.31)
-**BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
+MS Business Analytics** — Grand Canyon University (GPA 3.31)
+
+BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
 
 ---
 
 ## 💼 Experience
 
 **Honeywell Aerospace** — Engineer Program Management Intern (Jun–Sep 2025)
+
 **Leslie's Pools** — Retail Operations Analyst Intern (Summer 2024)
 
 ---
