@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikolas Zeiner — Financial & Business Analytics Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1C1C1E;
+    --pitch: #141414;
+    --grass: #5BC8F5;
+    --grass-dim: #4AB8E8;
+    --accent: #5BC8F5;
+    --red: #FF3B30;
+    --white: #f5f5f0;
+    --muted: #8a8f9e;
+    --card-bg: #242424;
+    --border: rgba(255,255,255,0.07);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; cursor: pointer; }
+  .field-bg { position: fixed; inset: 0; background: repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(91,200,245,0.025) 59px,rgba(91,200,245,0.025) 60px), repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(91,200,245,0.015) 59px,rgba(91,200,245,0.015) 60px); pointer-events: none; z-index: 0; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: rgba(28,28,30,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--white); }
+  .nav-logo span { color: #5BC8F5; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { pointer-events: all; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+  .nav-links a:hover { color: #5BC8F5; }
+  .hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 120px 48px 80px; overflow: hidden; }
+  .hero-content { max-width: 700px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #5BC8F5; text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.6s 0.2s ease forwards; }
+  .hero-tag::before { content: ''; width: 28px; height: 1px; background: #5BC8F5; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 10vw, 130px); line-height: 0.92; letter-spacing: 1px; opacity: 0; animation: fadeUp 0.7s 0.4s ease forwards; }
+  h1 .accent { color: #5BC8F5; }
+  h1 .outline { -webkit-text-stroke: 1px rgba(245,245,240,0.3); color: transparent; }
+  .hero-sub { margin-top: 28px; font-size: 16px; line-height: 1.7; color: var(--muted); max-width: 480px; opacity: 0; animation: fadeUp 0.7s 0.6s ease forwards; }
+  .hero-sub strong { color: var(--white); font-weight: 500; }
+  .hero-cta { margin-top: 44px; display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s 0.8s ease forwards; }
+  .btn-primary { pointer-events: all; padding: 14px 32px; background: #5BC8F5; color: var(--navy); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+  .btn-secondary { pointer-events: all; padding: 14px 32px; background: transparent; color: var(--white); font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s, color 0.2s; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+  .btn-secondary:hover { border-color: #5BC8F5; color: #5BC8F5; }
+  .hero-number { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: clamp(200px, 28vw, 380px); color: transparent; -webkit-text-stroke: 1px rgba(91,200,245,0.08); line-height: 1; user-select: none; pointer-events: none; opacity: 0; animation: fadeIn 1.2s 1s ease forwards; }
+  .skills-bar { position: relative; z-index: 1; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 48px; display: flex; align-items: center; overflow: hidden; }
+  .skills-scroll { display: flex; gap: 48px; animation: scrollLeft 20s linear infinite; white-space: nowrap; }
+  .skill-pill { display: flex; align-items: center; gap: 10px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); padding-right: 48px; }
+  .skill-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #5BC8F5; flex-shrink: 0; }
+  @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  section { position: relative; z-index: 1; padding: 100px 48px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px; color: #5BC8F5; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .section-label::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: #5BC8F5; opacity: 0.4; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(42px, 6vw, 72px); line-height: 1; margin-bottom: 12px; }
+  .section-sub { font-size: 15px; color: var(--muted); max-width: 500px; line-height: 1.6; margin-bottom: 64px; }
+  .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .project-card { background: var(--card-bg); border: 1px solid var(--border); padding: 44px; position: relative; transition: border-color 0.3s, transform 0.3s; cursor: pointer; }
+  .project-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(91,200,245,0.04), transparent 60%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+  .project-card:hover::before { opacity: 1; }
+  .project-card:hover { border-color: rgba(91,200,245,0.3); transform: translateY(-3px); }
+  .project-num { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px; color: #5BC8F5; opacity: 0.6; margin-bottom: 20px; }
+  .project-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 1px; line-height: 1.1; margin-bottom: 14px; }
+  .project-desc { font-size: 14px; line-height: 1.7; color: var(--muted); margin-bottom: 28px; }
+  .project-desc strong { color: var(--white); font-weight: 500; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+  .tag.highlight { border-color: rgba(255,255,255,0.4); color: #f5f5f0; background: rgba(255,255,255,0.05); }
+  .project-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .metric { background: var(--card-bg); padding: 20px; text-align: center; }
+  .metric-val { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #5BC8F5; line-height: 1; margin-bottom: 4px; }
+  .metric-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
+  .viz-mockup { background: var(--pitch); border: 1px solid var(--border); border-radius: 2px; padding: 20px; padding-top: 44px; min-height: 180px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; overflow: hidden; position: relative; }
+  .viz-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--muted); position: absolute; top: 16px; left: 20px; }
+  .scatter-plot { position: relative; height: 160px; margin-top: 20px; }
+  .scatter-dot { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #5BC8F5; opacity: 0.7; animation: popIn 0.3s ease forwards; animation-delay: var(--delay); transform: scale(0); }
+  .scatter-dot.red { background: var(--red); opacity: 0.6; }
+  .scatter-dot.yellow { background: var(--accent); opacity: 0.8; }
+  .line-chart { position: relative; height: 120px; margin-top: 28px; overflow: hidden; }
+  .line-chart svg { width: 100%; height: 100%; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text { font-size: 16px; line-height: 1.8; color: var(--muted); }
+  .about-text p + p { margin-top: 20px; }
+  .about-text strong { color: var(--white); font-weight: 500; }
+  .skill-group-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: #5BC8F5; text-transform: uppercase; margin-bottom: 10px; }
+  .skill-bars { display: flex; flex-direction: column; gap: 10px; }
+  .skill-bar-row { display: flex; align-items: center; gap: 14px; }
+  .skill-name { font-size: 13px; min-width: 80px; color: var(--white); }
+  .skill-track { flex: 1; height: 3px; background: rgba(255,255,255,0.08); position: relative; overflow: hidden; }
+  .skill-fill { height: 100%; background: #5BC8F5; width: var(--level); transform-origin: left; animation: expandBar 1s 0.5s ease forwards; transform: scaleX(0); }
+  .skill-pct { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); min-width: 30px; text-align: right; }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .contact-text { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .contact-links { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+  .contact-link { pointer-events: all; display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--white); font-size: 14px; padding: 16px 20px; border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s; cursor: pointer; }
+  .contact-link:hover { border-color: #5BC8F5; color: #5BC8F5; }
+  .contact-link-icon { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: #5BC8F5; min-width: 60px; }
+  .big-cta { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 8vw, 110px); line-height: 1; letter-spacing: 1px; }
+  .big-cta .outline { -webkit-text-stroke: 1px rgba(245,245,240,0.2); color: transparent; }
+  footer { position: relative; z-index: 1; padding: 28px 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+  .footer-badge { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: #5BC8F5; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(91,200,245,0.3); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes expandBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 0.7; } }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .gh { pointer-events: all; color: #5BC8F5; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border: 1px solid #5BC8F5; padding: 8px 16px; display: inline-block; margin-top: 16px; font-family: monospace; position: relative; z-index: 999; }
+  .gh:hover { background: rgba(91,200,245,0.1); }
+  .cert-card { background:var(--card-bg);border:1px solid var(--border);padding:32px;position:relative;transition:border-color 0.3s,transform 0.3s; }
+  .cert-card:hover { border-color:rgba(91,200,245,0.3);transform:translateY(-3px); }
+  .cert-status { font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:#5BC8F5;text-transform:uppercase;margin-bottom:12px; }
+  .cert-title { font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;margin-bottom:10px; }
+  .cert-desc { font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px; }
+  .cert-tags { display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px; }
+  .cert-tag { font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;padding:4px 10px;border:1px solid var(--border);color:var(--muted);text-transform:uppercase; }
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; } .nav-links { display: none; }
+    section { padding: 60px 24px; } .hero { padding: 100px 24px 60px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-number { display: none; } .skills-bar { padding: 16px 24px; }
+    footer { padding: 20px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="field-bg"></div>
+<nav>
+  <div class="nav-logo">NZ<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#udemy-courses">Udemy Courses</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Financial & Business Analytics · Investment Risk, Valuation & Planning</div>
+    <h1>NIKOLAS<br><span class="accent">ZEINER</span><br><span class="outline">PORTFOLIO</span></h1>
+    <p class="hero-sub">Turning raw data into <strong>sound financial decisions</strong>. From investment risk modeling and retirement planning simulations to supply chain risk and real estate valuation — I bridge the gap between numbers and financial strategy using <strong>SQL, R, Power BI, Tableau, Excel & Python</strong>. Currently studying for the FINRA Securities Industry Essentials (SIE) exam.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-number">10</div>
+</section>
+
+<!-- SKILLS BAR -->
+<div class="skills-bar">
+  <div class="skills-scroll">
+    <div class="skill-pill"><span class="dot"></span>Financial Modeling</div>
+    <div class="skill-pill"><span class="dot"></span>Investment Risk Analysis</div>
+    <div class="skill-pill"><span class="dot"></span>Monte Carlo Simulation</div>
+    <div class="skill-pill"><span class="dot"></span>SQL</div>
+    <div class="skill-pill"><span class="dot"></span>Power BI</div>
+    <div class="skill-pill"><span class="dot"></span>Tableau</div>
+    <div class="skill-pill"><span class="dot"></span>R / ggplot2</div>
+    <div class="skill-pill"><span class="dot"></span>Excel & VBA</div>
+    <div class="skill-pill"><span class="dot"></span>Python</div>
+    <div class="skill-pill"><span class="dot"></span>Supply Chain Analytics</div>
+    <div class="skill-pill"><span class="dot"></span>Financial Modeling</div>
+    <div class="skill-pill"><span class="dot"></span>Investment Risk Analysis</div>
+    <div class="skill-pill"><span class="dot"></span>Monte Carlo Simulation</div>
+    <div class="skill-pill"><span class="dot"></span>SQL</div>
+    <div class="skill-pill"><span class="dot"></span>Power BI</div>
+    <div class="skill-pill"><span class="dot"></span>Tableau</div>
+    <div class="skill-pill"><span class="dot"></span>R / ggplot2</div>
+    <div class="skill-pill"><span class="dot"></span>Excel & VBA</div>
+    <div class="skill-pill"><span class="dot"></span>Python</div>
+    <div class="skill-pill"><span class="dot"></span>Supply Chain Analytics</div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Work</div>
+  <div class="section-title">FEATURED PROJECTS</div>
+  <p class="section-sub">Four end-to-end analyses spanning investment risk, real estate, operations, and sports — demonstrating full-stack analytical depth across Python, SQL, R, Power BI, Tableau, and Excel.</p>
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 — Investment Risk -->
+    <div class="project-card reveal" style="grid-column: 1 / -1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="project-num">01 / FINANCIAL PLANNING · 3-STAGE PIPELINE</div>
+          <div class="project-title">INVESTMENT RISK & RETIREMENT PLANNING</div>
+          <p class="project-desc">A connected <strong>3-stage Python pipeline</strong> that mirrors a real financial advisory workflow. Stage 1: a 6-factor questionnaire scores client risk tolerance and outputs a Conservative / Moderate / Aggressive classification. Stage 2: the suggested allocation is stress-tested against <strong>5 years of live market data</strong> via the yfinance API — calculating Sharpe ratio, volatility, and correlation. Stage 3: a <strong>Monte Carlo engine runs 10,000 simulations</strong> projecting 30-year retirement outcomes, capturing sequence-of-returns risk that simple average-return models miss entirely.</p>
+          <div class="tags">
+            <span class="tag highlight">Python</span><span class="tag highlight">yfinance API</span><span class="tag highlight">Monte Carlo</span>
+            <span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Sharpe Ratio</span>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;font-style:italic;border-left:2px solid rgba(91,200,245,0.3);padding-left:14px;">"Risk score drives allocation, allocation maps to a stress-tested retirement scenario, and real correlation data shows what that allocation actually diversifies against."</p>
+          <a href="https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning" target="_blank" class="gh" style="margin-top:20px;">→ VIEW ON GITHUB</a>
+        </div>
+        <div>
+          <div class="viz-mockup" style="min-height:280px;">
+            <div class="viz-title">10,000 Simulated Retirement Paths — 30 Year Horizon</div>
+            <div class="line-chart" style="height:150px;margin-top:20px;">
+              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <defs><linearGradient id="lgRC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5BC8F5" stop-opacity="0.2"/><stop offset="100%" stop-color="#5BC8F5" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 70 C40 65,80 55,120 48 S200 30,300 10 L300 100 L0 100 Z" fill="url(#lgRC)"/>
+                <path d="M0 70 C40 65,80 55,120 48 S200 30,300 10" fill="none" stroke="#00C853" stroke-width="1.5" opacity="0.9"/>
+                <path d="M0 70 C40 71,80 72,120 71 S200 68,300 58" fill="none" stroke="#f5f5f0" stroke-width="1.5" opacity="0.8"/>
+                <path d="M0 70 C40 74,80 78,120 82 S200 92,300 96" fill="none" stroke="#ff3b30" stroke-width="1.5" opacity="0.8"/>
+              </svg>
+            </div>
+            <div style="display:flex;gap:14px;margin-top:8px;">
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:#00C853;">● 90th %ile</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:#f5f5f0;">● Median</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--red);">● 10th %ile</span>
+            </div>
+          </div>
+          <div class="project-metrics" style="margin-top:2px;">
+            <div class="metric"><div class="metric-val">10K</div><div class="metric-label">Simulations</div></div>
+            <div class="metric"><div class="metric-val">3</div><div class="metric-label">Pipeline Stages</div></div>
+            <div class="metric"><div class="metric-val">30YR</div><div class="metric-label">Time Horizon</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 — Real Estate -->
+    <div class="project-card reveal" style="padding:32px;">
+      <div class="project-num">02 / REAL ESTATE</div>
+      <div class="project-title" style="font-size:24px;">PHOENIX METRO REAL ESTATE DASHBOARD</div>
+      <p class="project-desc" style="font-size:13px;margin-bottom:16px;">Built a <strong>regression model in R</strong> analyzing 5,000+ home sales across 12 Phoenix Metro neighborhoods — then visualized pricing trends, days on market, and price per sqft in a <strong>Tableau dashboard</strong>. Key finding: 3.5x price gap between Paradise Valley ($1.2M) and Avondale ($340K).</p>
+      <div class="tags" style="margin-bottom:16px;">
+        <span class="tag highlight">R</span><span class="tag highlight">Tableau</span>
+        <span class="tag">Regression Modeling</span><span class="tag">Phoenix Market</span>
+      </div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">5K+</div><div class="metric-label">Home Sales</div></div>
+        <div class="metric"><div class="metric-val">12</div><div class="metric-label">Neighborhoods</div></div>
+        <div class="metric"><div class="metric-val">3.5x</div><div class="metric-label">Price Gap</div></div>
+      </div>
+      <a href="https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis" target="_blank" class="gh">→ VIEW ON GITHUB</a>
+    </div>
+
+    <!-- PROJECT 3 — Supply Chain -->
+    <div class="project-card reveal" style="padding:32px;">
+      <div class="project-num">03 / OPERATIONS & LOGISTICS</div>
+      <div class="project-title" style="font-size:24px;">SUPPLY CHAIN PERFORMANCE & INVENTORY RISK</div>
+      <p class="project-desc" style="font-size:13px;margin-bottom:16px;">Analyzed 1,000 purchase orders across 5 suppliers, 5 categories, and 5 warehouses using <strong>Python and SQL</strong> — surfacing SupplierC at 49.3% on-time rate with $3.1M spend at risk. Findings feed into a <strong>2-page Power BI dashboard</strong> with conditional formatting heat-mapping supplier reliability from red to green.</p>
+      <div class="tags" style="margin-bottom:16px;">
+        <span class="tag highlight">Python</span><span class="tag highlight">SQL</span><span class="tag highlight">Power BI</span>
+        <span class="tag">Supply Chain</span><span class="tag">Inventory Risk</span>
+      </div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">1K</div><div class="metric-label">Orders Analyzed</div></div>
+        <div class="metric"><div class="metric-val">5</div><div class="metric-label">SQL Queries</div></div>
+        <div class="metric"><div class="metric-val">49%</div><div class="metric-label">Worst On-Time Rate</div></div>
+      </div>
+      <a href="https://github.com/NikolasZeiner/Supply-Chain-Analytics" target="_blank" class="gh">→ VIEW ON GITHUB</a>
+      <a href="https://nikolaszeiner.github.io/Supply-Chain-Analytics" target="_blank" class="gh" style="margin-left:8px;background:rgba(91,200,245,0.1);">→ LIVE DASHBOARD</a>
+    </div>
+
+    <!-- PROJECT 4 — NBA Salary -->
+    <div class="project-card reveal" style="grid-column: 1 / -1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="project-num">04 / SPORTS & FINANCE · ALL 6 TOOLS</div>
+          <div class="project-title">NBA SALARY & PERFORMANCE INTELLIGENCE</div>
+          <p class="project-desc">The only project in this portfolio using <strong>all 6 tools</strong>. Cleaned and engineered a custom <strong>Points-per-Million</strong> cost-efficiency metric in Python, ran regression and positional analysis in R, wrote 5 SQL queries (team payroll, overpaid-player detection, hidden gems), built a 3-page Power BI dashboard, and delivered a 6-sheet Excel workbook with PivotTables, XLOOKUP, and COUNTIFS. Key finding: one player earned $47M while contributing almost nothing — the league's worst value contract by a wide margin.</p>
+          <div class="tags">
+            <span class="tag highlight">Python</span><span class="tag highlight">R</span><span class="tag highlight">SQL</span><span class="tag highlight">Power BI</span><span class="tag highlight">Excel</span>
+            <span class="tag">Cost Efficiency</span><span class="tag">Salary Analytics</span>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;font-style:italic;border-left:2px solid rgba(91,200,245,0.3);padding-left:14px;">"Python for prep, R for stats, SQL for queries, Power BI for dashboards, Excel for executive reporting — one dataset, six tools, one complete story."</p>
+          <a href="https://github.com/NikolasZeiner/NBA-Salary-Analysis" target="_blank" class="gh" style="margin-top:20px;">→ VIEW ON GITHUB</a>
+          <a href="https://nikolaszeiner.github.io/NBA-Salary-Analysis" target="_blank" class="gh" style="margin-top:8px;background:rgba(91,200,245,0.1);">→ LIVE DASHBOARD</a>
+        </div>
+        <div>
+          <div class="viz-mockup" style="min-height:250px;">
+            <div class="viz-title">Salary vs Points Per Game — 2022-23 NBA</div>
+            <div class="scatter-plot" style="height:160px;margin-top:20px;">
+              <div class="scatter-dot" style="left:8%;top:80%;--delay:0.05s"></div>
+              <div class="scatter-dot" style="left:15%;top:70%;--delay:0.1s"></div>
+              <div class="scatter-dot" style="left:22%;top:65%;--delay:0.15s"></div>
+              <div class="scatter-dot red" style="left:30%;top:55%;--delay:0.2s"></div>
+              <div class="scatter-dot" style="left:38%;top:48%;--delay:0.25s"></div>
+              <div class="scatter-dot yellow" style="left:48%;top:35%;width:10px;height:10px;--delay:0.3s"></div>
+              <div class="scatter-dot" style="left:55%;top:40%;--delay:0.35s"></div>
+              <div class="scatter-dot red" style="left:65%;top:60%;--delay:0.4s"></div>
+              <div class="scatter-dot yellow" style="left:75%;top:25%;width:9px;height:9px;--delay:0.45s"></div>
+              <div class="scatter-dot" style="left:85%;top:20%;--delay:0.5s"></div>
+              <div class="scatter-dot red" style="left:90%;top:65%;--delay:0.55s"></div>
+              <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 200 160" preserveAspectRatio="none">
+                <line x1="5" y1="145" x2="195" y2="15" stroke="rgba(91,200,245,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+              </svg>
+            </div>
+            <div style="display:flex;gap:16px;margin-top:8px;">
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:#00C853;">● Good Value</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:var(--red);">● Overpaid</span>
+              <span style="font-family:'DM Mono',monospace;font-size:8px;color:#5BC8F5;">● Elite</span>
+            </div>
+          </div>
+          <div class="project-metrics" style="margin-top:2px;">
+            <div class="metric"><div class="metric-val">376</div><div class="metric-label">Players Analyzed</div></div>
+            <div class="metric"><div class="metric-val">6</div><div class="metric-label">Tools Used</div></div>
+            <div class="metric"><div class="metric-val">$9.99M</div><div class="metric-label">Avg NBA Salary</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5 — NBA 2026-27 Coming Soon -->
+    <div class="project-card reveal" style="grid-column: 1 / -1; border: 1px solid rgba(91,200,245,0.2);">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="project-num">05 / LIVE SPORTS ANALYTICS · COMING OCTOBER 2026</div>
+          <div class="project-title">NBA 2026-27 SEASON LIVE TRACKER</div>
+          <p class="project-desc">Building a live NBA season tracking dashboard powered by the <strong>ESPN API</strong> — same pipeline architecture as the 2026 World Cup tracker but applied to the full NBA regular season. Will track team standings by conference, game results, scoring leaders, player stat trends, and head-to-head performance across all 30 teams. Dashboard updates daily throughout the 1,230-game regular season.</p>
+          <div class="tags">
+            <span class="tag highlight">Python</span><span class="tag highlight">Power BI</span><span class="tag highlight">ESPN API</span>
+            <span class="tag">NBA Analytics</span><span class="tag">Live Pipeline</span><span class="tag">Sports Analytics</span>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;font-style:italic;border-left:2px solid rgba(91,200,245,0.3);padding-left:14px;">"Extends the proven ESPN API pipeline into the NBA — demonstrating ability to adapt and scale live data infrastructure across different sports domains."</p>
+          <span style="display:inline-block;margin-top:20px;padding:8px 16px;font-family:monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(91,200,245,0.4);color:#5BC8F5;">LAUNCHING OCTOBER 2026</span>
+        </div>
+        <div>
+          <div class="viz-mockup" style="min-height:250px;">
+            <div class="viz-title">NBA Standings by Conference — Preview</div>
+            <div style="display:flex;gap:16px;height:180px;margin-top:20px;">
+              <div style="flex:1;">
+                <div style="font-family:'DM Mono',monospace;font-size:9px;color:#5BC8F5;margin-bottom:8px;">EASTERN</div>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--white);padding:4px 0;border-bottom:1px solid var(--border);">1. BOS <span style="color:#5BC8F5;">64-18</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">2. NYK <span>56-26</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">3. MIL <span>49-33</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;">4. PHI <span>47-35</span></div>
+                </div>
+              </div>
+              <div style="width:1px;background:var(--border);"></div>
+              <div style="flex:1;">
+                <div style="font-family:'DM Mono',monospace;font-size:9px;color:#5BC8F5;margin-bottom:8px;">WESTERN</div>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--white);padding:4px 0;border-bottom:1px solid var(--border);">1. OKC <span style="color:#5BC8F5;">57-25</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">2. MIN <span>56-26</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">3. DEN <span>54-28</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:4px 0;">4. LAC <span>51-31</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-metrics" style="margin-top:2px;">
+            <div class="metric"><div class="metric-val">30</div><div class="metric-label">Teams Tracked</div></div>
+            <div class="metric"><div class="metric-val">1,230</div><div class="metric-label">Season Games</div></div>
+            <div class="metric"><div class="metric-val">LIVE</div><div class="metric-label">Data Pipeline</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- UDEMY COURSES -->
+<section id="udemy-courses" style="background: var(--pitch); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-label">Self-Directed Learning</div>
+  <div class="section-title">UDEMY ONLINE COURSES</div>
+  <p class="section-sub">Technical training completed alongside portfolio projects.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;" class="reveal">
+    <div class="cert-card">
+      <div class="cert-status">Udemy · In Progress</div>
+      <div class="cert-title">The Complete Snowflake & dbt Hands-On Course</div>
+      <p class="cert-desc">Production-ready data pipelines using Snowflake and dbt — covering data ingestion from AWS S3, transformation models, semi-structured JSON, window functions, and role-based access control.</p>
+      <div class="cert-tags"><span class="cert-tag">Snowflake</span><span class="cert-tag">dbt</span><span class="cert-tag">Data Pipelines</span></div>
+      <a href="https://www.udemy.com/course/snowflake-dbt-a-hands-on-guide/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Udemy · Completed</div>
+      <div class="cert-title">Learn Data Visualization Using Tableau: Zero to Hero</div>
+      <p class="cert-desc">Hands-on Tableau training covering chart types, calculated fields, dashboard design, and storytelling techniques for turning raw data into clear visual insights.</p>
+      <div class="cert-tags"><span class="cert-tag">Tableau</span><span class="cert-tag">Data Visualization</span><span class="cert-tag">Dashboards</span></div>
+      <a href="https://www.udemy.com/course/learn-data-visualization-using-tableau-from-zero-to-hero/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Udemy · Completed</div>
+      <div class="cert-title">Excel Lookup Functions Deep Dive</div>
+      <p class="cert-desc">Deep dive into VLOOKUP, XLOOKUP, INDEX/MATCH, and nested lookup formulas for fast, error-resistant data retrieval across large workbooks.</p>
+      <div class="cert-tags"><span class="cert-tag">Excel</span><span class="cert-tag">XLOOKUP</span><span class="cert-tag">Formulas</span></div>
+      <a href="https://www.udemy.com/course/excel-lookup-functions-deep-dive-level-up-your-skill-set/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Udemy · Completed</div>
+      <div class="cert-title">R Programming</div>
+      <p class="cert-desc">Core R programming training covering data structures, data wrangling, statistical functions, and building predictive models — the foundation behind my capstone's regression and forecasting work.</p>
+      <div class="cert-tags"><span class="cert-tag">R</span><span class="cert-tag">Statistics</span><span class="cert-tag">Predictive Modeling</span></div>
+      <a href="https://www.udemy.com/course/r-programming/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Udemy · Completed</div>
+      <div class="cert-title">Microsoft Power BI — Up & Running with Power BI Desktop</div>
+      <p class="cert-desc">Practical Power BI Desktop training covering data modeling, DAX measures, report design, and building interactive dashboards for business reporting.</p>
+      <div class="cert-tags"><span class="cert-tag">Power BI</span><span class="cert-tag">DAX</span><span class="cert-tag">Data Modeling</span></div>
+      <a href="https://www.udemy.com/course/microsoft-power-bi-up-running-with-power-bi-desktop/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Udemy · In Progress</div>
+      <div class="cert-title">The Ultimate MySQL Bootcamp</div>
+      <p class="cert-desc">Comprehensive MySQL training from fundamentals through advanced querying — joins, subqueries, triggers, and database design for real-world applications.</p>
+      <div class="cert-tags"><span class="cert-tag">MySQL</span><span class="cert-tag">SQL</span><span class="cert-tag">Database Design</span></div>
+      <a href="https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/" target="_blank" class="gh">→ VIEW COURSE</a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="background: var(--navy); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-label">Credentials</div>
+  <div class="section-title">CERTIFICATIONS</div>
+  <p class="section-sub">Certifications currently in progress or planned.</p>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;" class="reveal">
+    <div class="cert-card">
+      <div class="cert-status">FINRA · In Progress</div>
+      <div class="cert-title">SIE: Securities Industry Essentials</div>
+      <p class="cert-desc">FINRA certification validating foundational knowledge of the securities industry, including regulatory structure, financial products, and industry rules and practices.</p>
+      <div class="cert-tags"><span class="cert-tag">FINRA</span><span class="cert-tag">Securities</span><span class="cert-tag">Financial Markets</span></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status">Microsoft · Planned</div>
+      <div class="cert-title">PL-300: Microsoft Power BI Data Analyst</div>
+      <p class="cert-desc">Certification validating skills in preparing, modeling, visualizing, analyzing, and deploying data with Power BI to drive business decisions.</p>
+      <div class="cert-tags"><span class="cert-tag">Power BI</span><span class="cert-tag">Data Analytics</span><span class="cert-tag">Microsoft</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background: var(--card-bg); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-label">Background</div>
+  <div class="section-title">ABOUT ME</div>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>I'm <strong>Nikolas J. Zeiner</strong>, a Business Analytics graduate based in <strong>Chandler, AZ</strong> with a Master of Science in Business Analytics (GPA 3.31) and a BS in Business Analytics with a Minor in Accounting — both from <strong>Grand Canyon University, Colangelo College of Business</strong>.</p>
+      <p>At <strong>Honeywell Aerospace</strong>, I built Tableau dashboards and automated reports that enhanced decision-making for engineering operations, and partnered with the EDM Automation team to standardize dashboards organization-wide. At <strong>Leslie's Pools</strong>, I designed a Power BI scorecard dashboard used across 950+ store locations, built SQL pipelines for operational data, and created Excel dashboards with advanced functions including VLOOKUP, XLOOKUP, and PivotTables.</p>
+      <p>My capstone project applied <strong>Logistic Regression, Random Forest, and Gradient Boosting in R</strong> alongside Monte Carlo simulations in Power BI to forecast SLA breaches and inventory risk — the kind of end-to-end thinking I bring to every dataset.</p>
+      <p>I'm currently studying for the <strong>FINRA Securities Industry Essentials (SIE)</strong> exam, and much of my recent independent work — client risk-tolerance scoring, portfolio correlation analysis, and Monte Carlo retirement planning — is focused on investment risk and financial decision-making.</p>
+      <p style="font-size:14px;">Also completed self-directed coursework in Snowflake/dbt, MySQL, Tableau, and Power BI to round out my technical toolkit.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:32px;">
+      <div>
+        <div class="skill-group-label">Education</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">M.S. Business Analytics</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Grand Canyon University · 2025 · GPA 3.31</div>
+          </div>
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">B.S. Business Analytics, Minor in Accounting</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Grand Canyon University · 2023 · GPA 3.26</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">Experience</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">Engineer Program Management Intern</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Honeywell Aerospace · Phoenix, AZ · Jun–Sep 2025</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;">Tableau dashboards & automated reports for aerospace engineering ops. Standardized dashboards org-wide with the EDM Automation team.</div>
+          </div>
+          <div style="border:1px solid var(--border);padding:16px 20px;">
+            <div style="font-size:13px;font-weight:500;color:var(--white);">Retail Operations Intern</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--grass);margin-top:3px;">Leslie's Pools · Summer 2024</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;">Power BI scorecard dashboard across 950+ stores. SQL pipelines for operational data. Advanced Excel dashboards (VLOOKUP, XLOOKUP, PivotTables).</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">Technical Skills</div>
+        <div class="skill-bars">
+          <div class="skill-bar-row"><span class="skill-name">Power BI</span><div class="skill-track"><div class="skill-fill" style="--level:95%"></div></div><span class="skill-pct">95%</span></div>
+          <div class="skill-bar-row"><span class="skill-name">Excel</span><div class="skill-track"><div class="skill-fill" style="--level:95%"></div></div><span class="skill-pct">95%</span></div>
+          <div class="skill-bar-row"><span class="skill-name">SQL</span><div class="skill-track"><div class="skill-fill" style="--level:85%"></div></div><span class="skill-pct">85%</span></div>
+          <div class="skill-bar-row"><span class="skill-name">Tableau</span><div class="skill-track"><div class="skill-fill" style="--level:85%"></div></div><span class="skill-pct">85%</span></div>
+          <div class="skill-bar-row"><span class="skill-name">R Studio</span><div class="skill-track"><div class="skill-fill" style="--level:80%"></div></div><span class="skill-pct">80%</span></div>
+          <div class="skill-bar-row"><span class="skill-name">Python</span><div class="skill-track"><div class="skill-fill" style="--level:65%"></div></div><span class="skill-pct">65%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div>
+      <div class="section-label">Let's Talk</div>
+      <div class="big-cta">READY<br>TO<br><span class="accent">ANALYZE.</span></div>
+      <p class="contact-text" style="margin-top:28px;">Open to financial analyst and advisory-track roles, as well as analyst positions across real estate, operations, and beyond. Let's turn your data into decisions.</p>
+    </div>
+    <div>
+      <div class="contact-links">
+        <a href="mailto:nzeiner@gmail.com" class="contact-link"><span class="contact-link-icon">EMAIL</span>nzeiner@gmail.com</a>
+        <a href="tel:4805280857" class="contact-link"><span class="contact-link-icon">PHONE</span>(480) 528-0857</a>
+        <a href="https://linkedin.com/in/nikolaszeiner" class="contact-link" target="_blank"><span class="contact-link-icon">LINKEDIN</span>linkedin.com/in/nikolaszeiner</a>
+        <a href="https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf" class="contact-link" target="_blank"><span class="contact-link-icon">RESUME</span>Download PDF</a>
+        <a href="#" class="contact-link"><span class="contact-link-icon">LOCATION</span>Chandler, AZ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 Nikolas Zeiner — Data Analyst Portfolio</div>
+  <div class="footer-badge">Available for Hire</div>
+</footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
