@@ -1,4 +1,4 @@
-# Hi there, I'm Nikolas Zeiner 👋
+# Hi there, I'm Nikolas Zeiner 
 
 **Data Analyst | MS Business Analytics | GCU**
 
