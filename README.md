@@ -28,11 +28,15 @@ Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, an
 
 ---
 ## 🎓 Education
-**MS Business Analytics** — Grand Canyon University (GPA 3.31)
-**BS Business Analytics**, Minor in Accounting — Grand Canyon University (GPA 3.26)
+
+**Grand Canyon University** — MS Business Analytics (GPA 3.31)
+
+**Grand Canyon University** — BS Business Analytics, Minor in Accounting (GPA 3.26)
 ---
 ## 💼 Experience
+
 **Honeywell Aerospace** — Engineer Program Management Intern (Jun–Sep 2025)
+
 **Leslie's Pools** — Retail Operations Analyst Intern (Summer 2024)
 ---
 ## 📬 Contact
