@@ -1,8 +1,8 @@
-# Hi there, I'm Nikolas Zeiner 
-**Data Analyst | MS Business Analytics | GCU**
-I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, and Excel — turning raw data into dashboards, models, and insights that support better decision-making. Currently seeking analytics roles in the Phoenix, AZ area.
-📄 **[Download Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf)**
-🌐 **[Portfolio Website](https://nikolaszeiner.github.io/NikolasZeiner/)**
+# Nikolas Zeiner
+**Data Analyst | MS Business Analytics, GCU** · Seeking analytics roles in Phoenix, AZ
+[Resume](https://raw.githubusercontent.com/NikolasZeiner/NikolasZeiner/main/Nikolas_Zeiner_Resume.pdf) · [Portfolio](https://nikolaszeiner.github.io/NikolasZeiner/) · nzeiner@gmail.com
+
+Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, and Excel — turning raw data into dashboards, models, and insights that support better decision-making.
 ---
 ## 🛠️ Skills
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
@@ -26,6 +26,14 @@ I build end-to-end analytics solutions using Python, SQL, R, Power BI, Tableau, 
 - PL-300: Microsoft Power BI Data Analyst *(In Progress)*
 - Databricks Certified Data Analyst Associate *(In Progress)*
 - PCAP: Certified Associate in Python Programming *(In Progress)*
+**Udemy Courses**
+- Learn Data Visualization Using Tableau: Zero to Hero ✅
+- Excel Lookup Functions Deep Dive ✅
+- R Programming ✅
+- Microsoft Power BI — Up & Running with Power BI Desktop ✅
+- The Ultimate MySQL Bootcamp ✅
+- Data Warehouse - The Ultimate Guide *(In Progress)*
+- BigQuery for Data Analysts *(In Progress)*
 ---
 ## 🎓 Education
 **MS Business Analytics** — Grand Canyon University (GPA 3.31)
