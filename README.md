@@ -23,7 +23,6 @@ Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, an
 | [📊 Investment Risk & Retirement Planning](https://github.com/NikolasZeiner/InvestmentRiskRetirementPlanning) | Python, yfinance, Monte Carlo | 3-stage pipeline scoring risk tolerance, stress-testing allocations against live market data, and projecting 30-year retirement outcomes across 10,000 simulations |
 | [🏠 Phoenix Metro Real Estate](https://github.com/NikolasZeiner/PhoenixRealEstateAnalysis) | R, Tableau | Regression model on 5,000+ home sales across 12 Phoenix neighborhoods — 3.5x price gap identified between Paradise Valley and Avondale |
 | [📦 Supply Chain Performance & Risk](https://github.com/NikolasZeiner/Supply-Chain-Analytics) | Python, SQL, Power BI | 1,000 purchase orders across 5 suppliers — SupplierC at 49.3% on-time rate with $3.1M spend at risk. 5 SQL queries, 2-page Power BI dashboard |
-| [⚽ Bundesliga 2026-27 Live Analytics Suite](https://github.com/NikolasZeiner/Bundesliga2026-27) | Python, R, Excel, Power BI | Live, self-updating analytics pipeline for the 2026-27 Bundesliga season — a deployed [Streamlit web app](YOUR_STREAMLIT_APP_URL_HERE) with live shot maps and xG race charts scraped straight from Understat, R season-trend and xG-regression analysis, a formula-driven Excel workbook (standings, KPIs, all real formulas), and an interactive Power BI dashboard with custom DAX measures and Bundesliga-branded theming |
 
 ---
 
