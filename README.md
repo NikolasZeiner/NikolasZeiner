@@ -35,10 +35,7 @@ Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, Al
 ## 📚 Certifications & Training
 
 **Industry Certifications**
-- PL-300: Microsoft Power BI Data Analyst *(In Progress)*
 - PCAP: Certified Associate in Python Programming *(In Progress)*
-- Databricks Certified Associate Developer for Apache Spark *(Planned)*
-- Salesforce Certified Tableau Data Analyst *(Planned)*
 
 **Udemy Courses**
 - Learn Data Visualization Using Tableau: Zero to Hero ✅
