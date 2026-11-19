@@ -56,4 +56,5 @@ Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, Al
 ## 💼 Experience
 
 **Honeywell Aerospace** — Engineer Program Management Intern (Jun–Sep 2025)
+
 **Leslie's Pools** — Retail Operations Analyst Intern (Summer 2024): built Power BI reporting for 950+ stores and automated district manager survey data into Snowflake with SQL
