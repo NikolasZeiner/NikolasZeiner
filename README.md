@@ -49,6 +49,7 @@ Building end-to-end analytics solutions in Python, SQL, R, Power BI, Tableau, Al
 ## 🎓 Education
 
 **Grand Canyon University** — MS Business Analytics (GPA 3.27)
+
 **Grand Canyon University** — BS Business Analytics, Minor in Accounting (GPA 3.15)
 
 ---
